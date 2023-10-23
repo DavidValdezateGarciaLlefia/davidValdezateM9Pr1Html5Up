@@ -1,0 +1,607 @@
+/*ponemos padding y margin para que toda la pagina este en buen margen */
+*{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+}
+/* todos los links no  tendran lineas*/
+a{
+    text-decoration:none;
+}
+/* todo el body tendra un font size y una fuente especificos*/
+body{
+    
+    font-size: 20px;
+   
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
+/* el contenedor principal no menu lateral le metemos un width y le damos un flex wrap para que al aumentar o minimizar se vea bien la pagina , justify content tambien para que este cnetrado*/
+#contenedor{
+    max-width: 1440px; 
+    width: 100%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    margin: auto;
+    transform: scale(0.7); /* Reducción del 20% (1 - 0.2 = 0.8) */
+    transform-origin: center; /* Centrar el punto de transformación */
+    
+     
+        
+       
+    }
+
+
+/*hacemos el menu con un position fixed para que este siempre en el lateral de la pantalla, tambien metemos el formulario y le ponemos un icono que sera absolute para poder moverlo y lo pondremos encima del menu, y lo modificamos para que se vea bien*/
+
+#menu{
+    
+    top: 0; 
+    left: 0; 
+    margin-top: 0px;
+    margin-left: 25px;
+    background-color: #f5f6f7;
+    height: 100%;
+    margin-left: 0;
+    width: 400px;
+    
+}
+.formularioBusca{
+    background-color: #EFF1F2;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.searchLupa{
+    width: 325px;
+    height: 50px;
+    border-radius: 5px;
+    margin-left: 35px;
+}
+.lupa{
+    position: absolute;
+    margin-left: -45px;
+    margin-top: 10px;
+}
+#menu h2,li{
+    margin-left: 50px;
+}
+/*esto es para hacer el titulo del menu*/
+.tituloMenu{
+    padding-top: 75px;
+    color: #3d4449;
+font-family: "Roboto Slab", serif;
+font-weight: 700;
+line-height: 1.5;
+font-size: 1.1em;
+border-bottom: solid 3px #f56a6a;
+width: 75px;
+
+}
+
+.divMenuTituloUno{
+    padding-top: 75px;
+    padding-bottom: 10px;
+    color: #3d4449;
+font-family: "Roboto Slab", serif;
+font-weight: 700;
+line-height: 1.5;
+font-size: 1.1em;
+border-bottom: solid 3px #f56a6a;
+width: 175px;
+}
+/*hacemos un display none para que no se vea el submenu y con un hover hacemos un display block y asi se nos vera el menu a traves de un displayblock*/
+
+.submenu {
+    display: none;
+}
+
+.itemsMenu li:hover .submenu{
+    display: block;
+}
+/*modificamos el submenu para que se v ea como el de la pagina*/
+.submenu li{
+    font-size: 12.5px;
+}
+/*hover para que al pasar por encima del menu se vea de color rojo las palabras*/
+.itemsMenu a:hover{
+    color: red;
+}
+
+
+.itemsMenu{
+    padding-top: 10px;
+    margin-top: 25px;
+    font-size: 0.7em;
+letter-spacing: 0.075em;
+
+color: rgba(210, 215, 217, 0.75);
+
+}
+.itemsMenu a{
+
+  
+
+color: #3d4449;
+
+}
+
+/*propiedades para que la lista no tenga estilo es decir no se vea un punto al lado de ella, para que este bien posicionada y tengan un borde abajo*/
+.itemsMenu  li{
+    margin-top: 20px;
+    border-bottom: solid 1px; 
+    width: 250px;
+    list-style: none;
+    padding-bottom: 15px;
+   
+}
+/*ponemos un borde transparente solo para el submenu*/
+.submenu li{
+    border: 0px transparent;
+    color: rgba(210, 215, 217, 0.75);
+}
+/*ponemos margenes para que el contenido este bien centrado y separado */
+#contenido{
+    margin-top: -4000px;
+    margin-left:700px;
+    
+
+
+}
+.contenedorImagenesMenu1{
+    margin-top: 40px;
+    padding-top: 40px;
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+.contenedorImagenesMenu1 img{
+    margin-top: -50px;
+    width: 350px;
+    
+    
+}
+/*un hover con una transfomracion para que haga zoom y como esta en un contenedor va ah acer zoom sin volverse mas grande*/
+.contenedorImagenesMenu1 img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+.iconos{
+    
+   margin-left:auto; 
+}
+.iconos a{
+    margin-left: 15px;
+}
+
+.iconos a:hover{
+    color: #f56a6a;
+}
+.header{
+    display: flex;
+    color: #3d4449;
+}
+
+.iconos a{
+    color: #3d4449;
+}
+
+.listaFinal{
+    padding-bottom: 50px;
+    
+}
+.strong{
+    color: black;
+}
+
+.header{
+    border-bottom: solid 4px #f56a6a;
+    width: 1700px;
+    padding-bottom: 25px;
+}
+.textoImagen{
+    margin-top: 100px;
+    display: flex;
+    height: 700px;
+    border-bottom:  rgba(210, 215, 217, 0.75) 2px solid;
+}
+.textoContenido h1{
+    padding-bottom: 25px;
+    font-size: 70px;
+    width: 550px;
+    color:#3d4449;
+}
+
+.textoContenido p{
+    font-family: 'Open Sans', sans-serif;
+
+    padding-bottom: 30px;
+    width: 800px;
+    font-size: 17.5px;
+    color: rgba(87, 89, 90, 0.75);
+    word-spacing: 2.5px;
+    line-height: 30px;
+    
+}
+.textoContenido h2{
+    font-family: "Roboto Slab", serif;
+    font-weight: normal;
+    padding-bottom: 30px;
+    width: 710px;
+    font-size: 18.5px;
+    color: rgba(87, 89, 90, 0.75);
+    word-spacing: 2.5px;
+}
+.imagenContenido img{
+    border-radius: 5px;
+    margin-left: 50px;
+    width: 850px;
+}
+/*decoramos el boton y hacemos que tenga un background y que tarde 0,3 segundos transparente al estar encima*/
+.botonTexto{
+    background-color: transparent;
+    border-radius: 0.375em;
+     color: #e95d5d;
+    border-color: #e95d5d ;
+    
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    font-size: 15px;
+    font-weight:750;
+    
+    letter-spacing: 0.075em;
+    line-height: 50px;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+   
+}
+
+
+/*Le pongo un padding para separarlo del div de Editorial*/
+
+.laciniaIconos{
+    padding-top: 125px;
+    width: 1700px;
+    border-bottom: rgba(87, 89, 90, 0.75) 1px solid;
+}
+/* Empezamos con el segundo div que contiene 4 articulos con iconos, y primero comenzamos editando el titulo para que tenga las caracteristicas como el de la pagina y le pongo un borde adecuado abajo */
+.laciniaIconos h2{
+    
+    color:#3d4449;
+    padding-bottom: 15px;
+    width: 190px;
+    border-bottom: solid 3px #f56a6a;
+}
+/* pongo un div para tener un borde para el icono y el icono le pongo absoluto para poder moverlo donde quiera y ponerlo dentro del div girado con borde para  que se muestre como en la pagina uso transform rotate para girarlo y position absolute para el icono tambien voy a poner un display flex para los 4 articulos*/
+.iconoGema{
+    
+    width: 160px;
+    height: 120px;
+    border:  rgba(87, 89, 90, 0.75) 1px solid;
+    transform: rotate(45deg);
+}
+.gema{
+    color: #f56a6a;
+    position: absolute;
+    font-size: 45px;
+    margin-top: 32.5px;
+    margin-left: 35px;
+}
+
+.laciniaIconosInterior{
+    margin-top: 50px;
+    
+    display: flex;
+    width: 1800px;
+    flex-wrap: wrap;
+}
+.laciniaIconosInterior article{
+    padding-right: 25px;
+    padding-bottom: 150px;
+    display: flex;
+    width: 800px;
+    font-size: 17.5px;
+}
+.derechaIcono{
+    margin-left: 75px;
+}
+.content p {
+    width: 610px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+.articulos h3{
+    margin-left: 50px;
+}
+
+/*Creo un nuevo div y le pongo el css del h2 como todos los demas y un padding para separarlo de los iconos con span*/
+.articulosContenido{
+    padding-top: 115px;
+   
+}
+.generalArticulos{
+    width: 1800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*borde del lado derecho y izquierdo, tambien tamaño de los divs para que esten bien separados para los bordes y el flex wrap y quse se vean bien*/
+
+.articulosContenido h2{
+
+    color:#3d4449;
+    padding-bottom: 15px;
+    width: 250px;
+    border-bottom: solid 3px #f56a6a;
+
+}
+.articulosContenido p{
+   color:  rgba(87, 89, 90, 0.75);
+   width: 503px;
+}
+
+
+/*le añadimos animacion a las imagenes al pasar por encima de ellas con un trnasform transition y hover*/ 
+.articulosImagenTexto img:hover{
+    transform: scale(1.1);
+    transition: transform 0.1s;
+}
+/*mobejos las imagenes para que queden bien puestas*/
+.articulosMovida img{
+    margin-left: 35px;
+}
+.abajo img{
+    margin-top: 50px;
+}
+
+.articulosImagenTexto{
+    height: 600px;
+    width: 583px;
+    
+}
+.contenedorImagen{
+    width: 495px;
+    height: 305px;
+    overflow: hidden;
+    
+    
+}
+.contenedorImagen img{
+    margin-left: 0;
+    margin-top: 0;
+    width: 495px;
+    height: 305px;
+    
+    
+    
+}
+/*css al boton para que se vea como el de la pagina */
+.botonArticulos{
+    background-color: transparent;
+    border-radius: 0.375em;
+     color: #e95d5d;
+    border-color: #e95d5d ;
+   
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    font-size: 15px;
+    font-weight:750;
+    
+    letter-spacing: 0.075em;
+    line-height: 50px;
+    padding: 0 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    
+}
+.botonArticulos:hover{
+    background-color: rgba(245, 89, 89, 0.05);
+}
+
+.articulo1{
+
+    border-right: 1px solid  rgba(210, 215, 217, 0.75);
+    border-bottom: 1px solid  rgba(210, 215, 217, 0.75);
+}
+
+
+.articulo2{
+   
+    border-right: 1px solid  rgba(210, 215, 217, 0.75);
+    border-bottom: 1px solid  rgba(210, 215, 217, 0.75);
+}
+
+.contenedor2{
+    margin-left: 42.5px;
+
+
+}
+/*movemos contenedor por contenedor ya que algunos son distintos y no lo pude hacer todos de una*/
+.contenedor3{
+    margin-left: 42.5px;
+}
+.contenedor5{
+    margin-left: 42.5px;
+}
+.articulo2 h3{
+    margin-left: 42.5px;
+}
+.articulo2 p{
+    margin-left: 42.5px;
+}
+.articulo2 button{
+    margin-left: 42.5px;
+}
+.articulo3 h3{
+    margin-left: 42.5px;
+}
+.articulo3 p{
+    margin-left: 42.5px;
+}
+.articulo3 button{
+    margin-left: 42.5px;
+}
+.articulo5 h3{
+    margin-left: 42.5px;
+}
+.articulo5 p{
+    margin-left: 42.5px;
+}
+.articulo5 button{
+    margin-left: 42.5px;
+}
+.contenedor4,.contenedor5,.contenedor6{
+    margin-top: 50px;
+}
+.articulo3{
+    
+    border-bottom: 1px solid   rgba(210, 215, 217, 0.75);
+}
+.articulo4{
+    
+    border-right: 1px solid   rgba(210, 215, 217, 0.75);
+}
+.articulo5{
+    
+    border-right: 1px solid   rgba(210, 215, 217, 0.75);
+}
+.articulo6{
+    margin-left: 45px;
+}
+.generalArticulos p{
+    font-size: 17px;
+    color:  rgba(87, 89, 90, 0.75);
+}
+.generalArticulos h3,p,button{
+    
+    padding-bottom: 20px;
+
+}
+
+
+
+/*padding para bajar los articulos de su titulo*/
+
+.generalArticulos{
+    padding-top: 50px;
+}
+.generalArticulos h3{
+    margin-top: 35px;
+}
+/*padding para el final de la pagina que no haya pequeño espacio*/
+.articulosContenido{
+    padding-bottom: 100px;
+}
+
+/*padding para separar el texto fuente, margenes width para que se vea bien un con un borde en el bottom y lo hacemos c on dos separados ya que el ultimo div tiene la linea abajo del boton y nos da problemas*/
+.divMenu1 p{
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 25px;
+    padding-bottom: 30px;
+    width: 350px;
+    font-size: 17.5px;
+    color: rgba(87, 89, 90, 0.75);
+    word-spacing: 2.5px;
+    line-height: 30px;
+    border-bottom: 1px solid   rgba(210, 215, 217, 0.75);
+    padding-bottom: 30px;
+}
+.divMenu2{
+    padding-bottom: 40px;
+    border-bottom: 1px solid   rgba(210, 215, 217, 0.75);
+  
+}
+.divMenu2 p{
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 25px;
+    padding-bottom: 30px;
+    width: 350px;
+    font-size: 17.5px;
+    color: rgba(87, 89, 90, 0.75);
+    word-spacing: 2.5px;
+    line-height: 30px;
+    
+    padding-bottom: 30px;
+}
+
+.divMenu2 button{
+    margin-left: 20px;
+}
+
+/*modificamos el titulo del contacto y el parrafo de este*/
+.contactoMenu h2{
+    padding-top: 40px;
+    font-size: 23px;
+    color:#3d4449;
+    padding-bottom: 15px;
+    width: 160px;
+    border-bottom: solid 3px #f56a6a;
+}
+
+.contactoMenu p{
+    padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 25px;
+    padding-bottom: 30px;
+    width: 375px;
+    font-size: 17.5px;
+    color: rgba(87, 89, 90, 0.75);
+    word-spacing: 2.5px;
+    line-height: 30px;
+}
+
+/*modificamos los icnonos tamaño y color para que se vean igual*/
+
+.carta{
+    color: #f56a6a;
+    
+    font-size: 27.5px;
+    
+    margin-left: 25px;
+}
+
+.contactoIconos{
+    padding-top: 15px;
+    width: 375px;
+    display: flex;
+    border-bottom: 1px solid   rgba(210, 215, 217, 0.75);
+       
+
+}
+
+.contactoIconos p{
+    margin-top: -12.5px;
+    
+}
+
+.puntitos{
+    border: dotted 1px rgba(87, 89, 90, 0.75);
+    width: 185px;
+    position: absolute;
+    margin-top: -32.5px;
+    margin-left: 75px;
+   
+}
+/*decoracion final para el copyright*/
+.copyright{
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 25px;
+    padding-bottom: 30px;
+    width: 300px;
+    font-size: 15px;
+    color: rgba(210, 215, 217, 0.75);
+    
+    line-height: 30px;
+}
